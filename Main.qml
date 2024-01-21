@@ -4,6 +4,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import testingQml
 
 
 ApplicationWindow {
@@ -35,7 +36,7 @@ ApplicationWindow {
         anchors.margins: appWindow.margin
         Button {
             text: "set firstName"
-            onClicked: firstName.text = "shalom"
+            onClicked: firstNameId.text = "shalom"
         }
         GroupBox {
             id: gridBox
