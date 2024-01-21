@@ -11,16 +11,9 @@ ApplicationWindow {
 
     MyType {
         id: myType
+        firstName: firstNameId.text
+        lastName: lastNameId.text
     }
-
-
-
-    Binding {
-        myType.firstName: firstName.text
-        myType.lastName: lastName.text
-        myType.msg.message: message.text
-    }
-
 
     visible: true
     title: "Basic layouts"
@@ -63,14 +56,14 @@ ApplicationWindow {
                 Label { text: myType.fullName}
 
                 TextField {
-                    id: firstName
+                    id: firstNameId
 
                 }
                 TextField {
-                    id: lastName
+                    id: lastNameId
                 }
                 TextField {
-                    id: message
+                    text: myType.fullName
                 }
 
                 TextArea {
